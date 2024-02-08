@@ -7,17 +7,17 @@ driver = webdriver.Chrome()
 driver.get("https://www.youtube.com/")
 
 time.sleep(5)
-Giris= driver.find_element(By.XPATH,"//input[@id='search']")
-Giris.send_keys("Channel name ") # Channel name
-Giris.send_keys(Keys.ENTER)
+entry driver.find_element(By.XPATH,"//input[@id='search']")
+entry.send_keys("Channel name ") # Channel name
+entry.send_keys(Keys.ENTER)
 time.sleep(5)
-Vishanti = driver.find_element(By.XPATH,"//*[@id='channel-title']")
-Vishanti.click()
+Channel = driver.find_element(By.XPATH,"//*[@id='channel-title']")
+Channel.click()
 time.sleep(5)
-Videolar = driver.find_element(By.XPATH,"//tp-yt-paper-tab[2]/div[@class='tab-content style-scope tp-yt-paper-tab']")
-Videolar.click()
+Videos = driver.find_element(By.XPATH,"//tp-yt-paper-tab[2]/div[@class='tab-content style-scope tp-yt-paper-tab']")
+Videos.click()
 time.sleep(5)
-son = driver.find_element(By.XPATH,"//yt-formatted-string[.='Video name']") # Video name
-son.click()
+video = driver.find_element(By.XPATH,"//yt-formatted-string[.='Video name']") # Video name
+video.click()
 time.sleep(5)
 input("Press ENTER to exit\n")
