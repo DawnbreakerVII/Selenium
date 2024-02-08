@@ -7,9 +7,9 @@ driver = webdriver.Chrome()
 driver.get("https://www.youtube.com/")
 driver.maximize_window()
 time.sleep(2)
-Giris= driver.find_element(By.XPATH,"//input[@id='search']")
-Giris.send_keys("Title Name")    # The title by which you want to search the video 
-Giris.send_keys(Keys.ENTER)
+Entry= driver.find_element(By.XPATH,"//input[@id='search']")
+Entry.send_keys("Title Name")    # The title by which you want to search the video 
+Entry.send_keys(Keys.ENTER)
 time.sleep(2)                    # Adjust according to internet speed
 loopCounter = 0
 last_height = driver.execute_script("return document.documentElement.scrollHeight")
@@ -25,6 +25,6 @@ while True:
     last_height = new_height
     loopCounter+=1         
 time.sleep(3)
-son = driver.find_element(By.XPATH,"//yt-formatted-string[.='Video Name']") # Enter the video name
-son.click()
+video = driver.find_element(By.XPATH,"//yt-formatted-string[.='Video Name']") # Enter the video name
+video.click()
 input("Press ENTER to exit\n")
